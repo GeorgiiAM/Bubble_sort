@@ -12,15 +12,21 @@ import bubblesort;
 void main() 
 {
     string arr;
-    write("arraySort ");
-    arr = readln;
 	bool int_flag = true;
-    // string arr = "1 0 4.0 7 3.3 2 9 -5 8 6";
 
-    
 	try
 	{
+		write("arraySort ");
+		arr = readln;
+		dchar terminator = '\x0a';
+
 		string[] split_arr = split(arr);
+
+		if (arr[0] == terminator || split_arr.length == 0)
+		{
+			throw new Exception("input data is empty");
+		}
+
 		foreach(n; split_arr)
 		{
 			// check input data
