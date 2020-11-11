@@ -59,7 +59,7 @@ void main()
 	}
 	catch(Exception e)
 	{
-		writeln("result:", e.msg);
+		writeln("result:   ", e.msg);
 	}
 	finally
 	{
@@ -70,5 +70,5 @@ void main()
 void printResult(T)(T[] input_arr)
 {
 	string answer = to!string(input_arr);
-	writeln(answer[1..$-1]);
+	writeln("result:   ", answer[1..$-1]);
 }
